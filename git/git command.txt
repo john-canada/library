@@ -1,0 +1,63 @@
+install git
+
+git --version = show git version
+
+git init = initialized
+
+git touch filename.extension  = create file or include file
+
+git config --global user.name 'JOhn' = add username
+
+git config --global user.email 'canadajun1972@gmail.com' = add email
+
+git add filename.ext = add file to resporatory
+
+git rm --cached file = to unstage
+
+git add . or *.* =add files to staging area
+
+git add -A = add all changes
+
+git commit to exit window type :wq to back command prompt
+
+git commit -m 'changes  made';
+
+git reset head file = to unstage
+
+touch .gitignore = exlude files to stage
+
+.gitignore commands
+   log.text = ignore this file to stage
+   /directoryname =ignore directoryname
+   *.txt = ignore all txt extension
+
+
+git branch login = creat branch not stage - task unstage
+git checkout login = to switch
+     while on the login branch we can create file by touch filename to add in the folder
+
+git checkout master  = file is gone on branch 
+git merge login = to merge the login file;
+
+open github follow command
+  copy last two command to git terminal
+
+git push = push file to github
+
+git clone url = from githud to local
+git pull = go back to original folder
+
+git checkout -- . = recover files
+
+git push origin master = update repo files
+git pull origin master = from repository to local files
+   then git add -A, git commit  and  pushback to github
+
+   pwd = display directory
+   cd drag folder into directory
+
+   git mkdir = make directory 
+
+   git remote -v = display url
+
+   git remote set-url origin url = copy local to remote 

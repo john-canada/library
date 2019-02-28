@@ -1,0 +1,607 @@
+/*
+Theme Name: AW
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.7
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Accessibility
+3.0 Alignments
+4.0 Clearings
+5.0 Typography
+6.0 Forms
+7.0 Formatting
+8.0 Lists
+9.0 Tables
+10.0 Links
+11.0 Featured Image Hover
+12.0 Navigation
+13.0 Layout
+   13.1 Header
+   13.2 Front Page
+   13.3 Regular Content
+   13.4 Posts
+   13.5 Pages
+   13.6 Footer
+14.0 Comments
+15.0 Widgets
+16.0 Media
+   16.1 Galleries
+17.0 Customizer
+18.0 SVGs Fallbacks
+19.0 Media Queries
+20.0 Print
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Normalize
+Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
+--------------------------------------------------------------*/
+.main_blogs ul {margin: 0 0 0 18px;}
+.main_blogs{font-weight: 300;}
+
+.trans, .trans:focus, .trans:hover {
+	transition: all 150ms ease-in-out;
+}
+
+.mg {
+	margin: 70px auto;
+}
+
+.button {
+	display: table;
+	width: 156px;
+	height: 50px;
+	border-radius: 1000px;
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+	
+.button	span {
+		line-height: 50px;
+		display: inline-block;
+		text-align: center;
+	}
+
+
+
+#callbutton {
+	cursor: pointer;
+	background-color: #637591;
+}
+	
+#callbutton:hover {
+	background-color: #15bf81;
+	color:white;
+	}
+		
+@keyframes pulsate {
+    0%   {box-shadow: 0 0 0 0px rgba(21, 191, 129, 0);}
+    40%  {box-shadow: 0 0 0 8px rgba(21, 191, 129, 0.3);}
+    100% {box-shadow: 0 0 0 0px rgba(21, 191, 129, 0);}
+}
+
+#callbutton.calling {
+	background-color: #15bf81;
+	animation-name: pulsate;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+}
+
+#callbutton.hover {
+	background-color: #ff6666;
+	box-shadow: 0 0 0 0px rgba(21, 191, 129, 0.3);
+	animation: none;
+}
+
+input[type="text"], input[type="email"]
+{
+	height:45px;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="email"]:focus
+{
+	border:1px solid #ff0000;
+	background:#efefef;
+}
+
+.how-work-icon .fa {
+    color: #000;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 29px;
+    border: 1px solid #000;
+    width: 70px!important;
+    height: 70px!important;
+}
+
+.post_items {
+    min-height: 590px!important;
+ }
+
+
+
+ .btn.btn-info.btn-lg{
+
+    margin: 20px;
+    width: 300px;
+
+    left: 50%!important;
+    margin-left: 40%!important;
+  
+ }
+
+
+
+.checkout {
+  width: 412px;
+  margin: 50px auto;
+  padding: 15px;
+  background: #f3f6fa;
+  border: 1px solid;
+  border-color: #c2cadb #bbc5d6 #b7c0cd;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  margin-left: -207px;
+}
+.checkout > p {
+  zoom: 1;
+}
+.checkout > p:before, .checkout > p:after {
+  content: '';
+  display: table;
+}
+.checkout > p:after {
+  clear: both;
+}
+.checkout > p + p {
+  margin-top: 15px;
+}
+
+.checkout-header {
+  position: relative;
+  margin: -15px -15px 15px;
+}
+
+.checkout-title {
+  padding: 0 15px;
+  line-height: 38px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #7f889e;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+  background: #eceff5;
+  border-bottom: 1px solid #c5ccdb;
+  border-radius: 7px 7px 0 0;
+  background-image: -webkit-linear-gradient(top, #f5f8fb, #e9edf3);
+  background-image: -moz-linear-gradient(top, #f5f8fb, #e9edf3);
+  background-image: -o-linear-gradient(top, #f5f8fb, #e9edf3);
+  background-image: linear-gradient(to bottom, #f5f8fb, #e9edf3);
+  -webkit-box-shadow: inset 0 1px white;
+  box-shadow: inset 0 1px white;
+}
+.checkout-title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-price {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 40px;
+  font: 14px/40px Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+  text-indent: -1px;
+  letter-spacing: -1px;
+  background: #e54930;
+  border: 1px solid;
+  border-color: #b33323 #ab3123 #982b1f;
+  border-radius: 21px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: -webkit-linear-gradient(top, #f75a3b, #d63b29);
+  background-image: -moz-linear-gradient(top, #f75a3b, #d63b29);
+  background-image: -o-linear-gradient(top, #f75a3b, #d63b29);
+  background-image: linear-gradient(to bottom, #f75a3b, #d63b29);
+  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.checkout-price:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  border: 2px solid #f5f8fb;
+  border-radius: 18px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+input {
+  margin: 0;
+  line-height: normal;
+  font-family: inherit;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.checkout-input {
+  float: left;
+  padding: 0 7px;
+  height: 32px;
+  color: #525864;
+  background: white;
+  border: 1px solid;
+  border-color: #b3c0e2 #bcc5e2 #c0ccea;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, #f6f8fa, white);
+  background-image: -moz-linear-gradient(top, #f6f8fa, white);
+  background-image: -o-linear-gradient(top, #f6f8fa, white);
+  background-image: linear-gradient(to bottom, #f6f8fa, white);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
+}
+.checkout-input:focus {
+  border-color: #46aefe;
+  outline: none;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
+}
+.lt-ie9 .checkout-input {
+  line-height: 30px;
+}
+
+.checkout-name {
+  width: 150px;
+}
+
+.checkout-card {
+  width: 210px;
+}
+
+.checkout-exp,
+.checkout-cvc {
+  margin-left: 15px;
+  width: 45px;
+}
+
+.checkout-btn {
+  width: 100%;
+  height: 34px;
+  padding: 0;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid;
+  border-color: #1486f9 #0f7de9 #0d6acf;
+  background: #1993fb;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, #4cb1fe, #229afc 40%, #138df6);
+  background-image: -moz-linear-gradient(top, #4cb1fe, #229afc 40%, #138df6);
+  background-image: -o-linear-gradient(top, #4cb1fe, #229afc 40%, #138df6);
+  background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.checkout-btn:active {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border-color: #075bba #0c69d2 #0f7de9;
+  background-image: -webkit-linear-gradient(top, #1281dc, #1593fc);
+  background-image: -moz-linear-gradient(top, #1281dc, #1593fc);
+  background-image: -o-linear-gradient(top, #1281dc, #1593fc);
+  background-image: linear-gradient(to bottom, #1281dc, #1593fc);
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
+}
+
+:-moz-placeholder {
+  color: #acb6c8 !important;
+}
+
+::-moz-placeholder {
+  color: #acb6c8 !important;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #acb6c8;
+}
+
+:-ms-input-placeholder {
+  color: #acb6c8;
+}
+
+::-moz-focus-inner {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+
+.modal-dialog {
+    width: 0!important;    
+}
+
+
+.modal-content {
+    border: 0!important;
+ 
+}
+
+.checkout-input.checkout-name{
+	width: 208px!important;
+}
+
+.checkout-input.checkout-exp,.checkout-input.checkout-cvc{
+	width:70px;
+}
+
+.checkout-input.checkout-card{
+	width:286px;
+}
+
+
+/********check out form start here************/
+
+
+.container123 {max-width: 850px; width: 100%; margin: 0 auto;}
+.four { width: 32.26%; max-width: 32.26%;}
+
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORM */
+
+.form .plan input, .form .payment-plan input, .form .payment-type input{
+	display: none;
+}
+
+.form label{
+	position: relative;
+	color: #fff;
+	background-color: #aaa;
+	font-size: 26px;
+	text-align: center;
+	height: 150px;
+	line-height: 150px;
+	display: block;
+	cursor: pointer;
+	border: 3px solid transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+	border: 3px solid #333;
+	background-color: #2fcc71;
+}
+
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+	content: "\2713";
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 100%;
+	border: 2px solid #333;
+	background-color: #2fcc71;
+	z-index: 999;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+.submit{
+	padding: 15px 60px;
+	display: inline-block;
+	border: none;
+	margin: 20px 0;
+	background-color: #2fcc71;
+	color: #fff;
+	border: 2px solid #333;
+	font-size: 18px;
+	-webkit-transition: transform 0.3s ease-in-out;
+	-o-transition: transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover{
+	cursor: pointer;
+	transform: rotateX(360deg);
+}
+
+
+.checkout-form{
+
+	text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.h2class{
+
+  margin:20px;
+
+}
+
+/********check out form end here************/
+
+
+/********card start here ************/
+
+
+.container-price-card {
+  width: 85%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+}
+
+.card {
+  width: 325px;
+  border-radius: 10px;
+  padding: 30px 20px 59px 20px;
+  border: 0;
+}
+
+.card1 {
+  background: linear-gradient(to bottom right, #FC56F6, #A356FD);
+  box-shadow: 3px 15px 30px rgba(171, 86, 252, 0.75);
+}
+
+.card2 {
+  background: linear-gradient(to bottom right, #56D0FD, #56FD7D);
+  box-shadow: 3px 15px 30px rgba(86, 247, 142, 0.75);
+}
+
+.card3 {
+  background: linear-gradient(to bottom right, #FDBD56, #FD56B6);
+  box-shadow: 3px 15px 30px rgba(253, 99, 169, 0.75);
+}
+
+.card h3 {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+
+.card h4 {
+  color: white;
+  font-size: 40px;
+  margin-top: 53px;
+}
+
+.card h2 {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 118px;
+  font-weight: 900;
+  position: absolute;
+  margin-left: -6px;
+  pointer-events: none;
+}
+
+.card hr {
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.15);
+  margin-top: 53px;
+}
+
+.card p:first-of-type {
+  margin-top: 40px;
+}
+
+.card p {
+  color: white;
+  font-size: 24px;
+}
+
+.card p:nth-of-type(2) {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.card a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 85px 11px 85px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 40px;
+  border-radius: 6px;
+  transition: background-color 0.5s;
+}
+
+.card a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-width: 1900px) {
+  .grid {
+    grid-template-columns: 100%;
+    grid-row-gap: 50px;
+  }
+}
+
+
+.card a {
+    margin: auto!important;
+ 
+}
+
+@media all and (min-width:1024px){
+
+ .grid {
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 50px;
+}
+
+.card.card1,.card.card2,.card.card3{
+	width:350px;
+	margin: 10px;
+}
+
+}
+
+
+/********card end here************/
+
